@@ -1,10 +1,11 @@
-// 1. Pair Sum (check if any two elements = target)
-bool pairSum(int arr[], int n, int target) {
+// 2. Print All Subarrays
+void printSubarrays(int arr[], int n) {
     for (int i = 0; i < n; i++) {
-        for (int j = i + 1; j < n; j++) {
-            if (arr[i] + arr[j] == target)
-                return true;
+        for (int j = i; j < n; j++) {
+            for (int k = i; k <= j; k++) {
+                cout << arr[k] << " ";
+            }
+            cout << endl;
         }
     }
-    return false;
 }
